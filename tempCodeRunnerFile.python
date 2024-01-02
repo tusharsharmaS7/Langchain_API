@@ -1,0 +1,10 @@
+from langchain.chains import TextGenerationChain
+
+# Connect to your LLM (replace with your LLM configuration)
+llm = TextGenerationChain.from_pretrained("facebook/bart-base")
+
+# Generate text using a prompt
+prompt = "Write a poem about a robot who falls in love with a human."
+generated_text = llm(prompt)
+
+print(generated_text)
